@@ -1,0 +1,116 @@
+<div>
+    <!--top-->
+    <div class="container-fluid">
+        <div class="top relative">
+            <a href="#/introduction" class="f20 absolute intro-link">
+                <span class="fa fa-rocket inline-block"></span> 餐厅介绍
+            </a>
+            <a href="#/main" class="f20 absolute classify-link">
+                <span class="fa fa-bars inline-block"></span> 菜品分类
+            </a>
+            <!--购物车-->
+            <div class="inline-block absolute cart-div ">
+                <button class="btn show-order-btn" type="button" onclick="showCart()">
+                    <span class="fa fa-2x fa-shopping-cart"></span>
+                    <span class="f20"> 已点</span>
+                    <span class="badge">{{ orders.length }}</span>
+                </button>
+                <div class="absolute odered-food-container cart">
+                    <div ng-if="orders.length">
+                        <p class="relative order-info">
+                            <span class="absolute align-center inline-block">菜名</span>
+                            <span class="absolute align-center inline-block">数量</span>
+                            <span class="absolute align-center inline-block">价格</span>
+                        </p>
+                        <p ng-repeat="order in orders" class="relative order-info">
+                            <span class="absolute inline-block align-center">{{ order.name }}</span>
+                            <span class="absolute inline-block align-center">{{ order.num }}</span>
+                            <span class="absolute inline-block align-center">{{ order.price | currency:"￥" }}</span>
+                        </p>
+                        <div class="go-count-div">
+                            <a href="#/ordered" class="btn btn-primary" >去结算</a>
+                        </div>
+                    </div>
+                    <p ng-if="!orders.length">您还没选择美食,快去点餐吧！</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!--banner-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active relative" data-toggle="modal" data-target="#myModal"
+                     ng-click="showDetail(defaultHot)">
+                    <img ng-src="{{defaultHot.src}}" alt="{{ defaultHot.name }}">
+                    <p class="banner-title absolute">{{ defaultHot.name }}</p>
+                </div>
+                <div ng-repeat="food in allRecommend" class="item relative" data-toggle="modal" data-target="#myModal"
+                     ng-click="showDetail(food)">
+                    <img ng-src="{{ food.src}}" alt="{{ food.name }}">
+                    <p class="banner-title absolute">{{ food.name }}</p>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <span class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </span>
+            <span class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </span>
+        </div>
+       <!-- <div id="carousel-example-generic" class="carousel slide col-lg-8" data-ride="carousel">
+            <div class="carousel-inner " role="listbox">
+                <div class="item active relative" data-toggle="modal" data-target="#myModal"
+                     ng-click="showDetail(defaultHot)">
+                    <img ng-src="{{defaultHot.src}}" alt="{{ defaultHot.name }}">
+                    <p class="banner-title absolute">{{ defaultHot.name }}</p>
+                </div>
+                <div ng-repeat="food in allRecommend" class="item relative" data-toggle="modal" data-target="#myModal"
+                     ng-click="showDetail(food)">
+                    <img ng-src="{{ food.src}}" alt="{{ food.name }}">
+                    <p class="banner-title absolute">{{ food.name }}</p>
+                </div>
+            </div>
+            &lt;!&ndash; 翻页 &ndash;&gt;
+                <span class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </span>
+                <span class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </span>
+        </div>-->
+    </div>
+    <!--热门菜品-->
+    <section>
+        <div class="container hotContainer">
+            <div class="menuDiv clear row">
+                <div class="single-box col-sm-4 col-xs-12 relative" ng-repeat="food in hotMenu"
+                     ng-click="showDetail(food)">
+                    <img ng-src="{{ food.src }}" alt="" data-toggle="modal" data-target="#myModal">
+                    <div>
+                        <h3 class="dish-name f16">{{ food.name }}</h3>
+                        <p class="price">{{ food.price | currency:"RMB ￥"}}</p>
+                        <button type="button" ng-if="!food.selected " ng-click="order(food)" class="orderBtn">点菜
+                        </button>
+                        <button type="button" ng-if="food.selected" class="oderedBtn" ng-disabled>已点</button>
+                    </div>
+                </div>
+                <detail food="food"></detail>
+            </div>
+        </div>
+    </section>
+</div>
+

@@ -1,0 +1,115 @@
+@charset "utf-8";
+/*--top--*/
+#home .container-fluid{
+    padding: 0;
+}
+#home .top{
+    text-align: center;
+    background: #2dc0b8;
+    padding: 30px 0;
+    z-index:999
+}
+#home .top a,#home .cart-div{
+    color: white;
+    top:50%;
+    transform: translateY(-50%);
+}
+#home .intro-link{
+    left: 20px;
+}
+.banner{
+    position: relative;
+    z-index: -1;
+}
+/*--------------购物车-------------*/
+#home .cart-div{
+    right: -35px;
+    z-index: 99;
+}
+#home .cart-div .odered-food-container p{
+    padding:20px 0;
+    margin:0 5px;
+    color: black;
+}
+#home .cart-div .order-info span{
+    color:black;
+    margin:-15px 5px 5px 5px ;
+    width: 60px;
+    height:30px;
+    line-height: 30px;
+}
+#home .btn:hover, .btn:focus,.btn:active:focus,.btn:active{
+    color: white;
+    outline: none;
+    box-shadow: none;
+}
+#home .cart-div button{
+    padding: 0 50px;
+    background: none;
+    border:none;
+}
+.odered-food-container{
+    display: none;
+    background: white;
+    z-index: 100;
+    width: 120%;
+    right:35px;
+    top: 45px;
+}
+#home .cart-div .badge{
+    color: white;
+    background: red;
+    top: -20px;
+    left: -7px;
+    padding: 2px 5px;
+}
+.order-info span:nth-child(1){
+    left: -5px;
+}
+.order-info span:nth-child(2){
+    left:70px;
+}
+.order-info span:nth-child(3){
+    right:10px;
+}
+.go-count-div{
+    margin-top:20px;
+    text-align: center;
+}
+.go-count-div .btn{
+    width: 60%;
+    background: red;
+    outline: none;
+    border: none;
+}
+/*---------------banner----------------*/
+#home #carousel-example-generic{
+    text-align: center;
+}
+#home .carousel-inner>.item>img{
+    width: 100%;
+}
+#home .banner-title{
+    width: 100%;
+    text-align: center;
+    background: black;
+    opacity: 0.7;
+    color: white;
+    padding:10px 0;
+    font: 18px "微软雅黑";
+    bottom: 0;
+}
+#home .carousel-indicators{
+    bottom: 60px;
+}
+#home .carousel-control.right,.carousel-control.left{
+    background: none;
+}
+#home .carousel-control .glyphicon-chevron-right,.carousel-control .glyphicon-chevron-left{
+    color:#ebc208;
+}
+
+/*-----模态框-----*/
+
+
+

@@ -1,0 +1,34 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close yellow" data-dismiss="modal"><span aria-hidden="true" >&times;</span><span class="sr-only">Close</span></button>
+                <h2 class="modal-title align-center" id="myModalLabel">{{food.name}}</h2>
+                <div class="imgContainer"><img ng-src="{{ food.src }}" alt=""></div>
+
+            </div>
+            <div class="modal-body">
+                <ul class="detailUl">
+                    <li>
+                        <span class="infoTitle">单价:</span>
+                        <span >{{ food.price }}</span>
+                    </li>
+                    <li>
+                        <span class="infoTitle">风味:</span>
+                        <span >{{ food.taste }}</span>
+                    </li>
+                    <li>
+                        <span class="infoTitle">简介:</span>
+                        <span >{{ food.introduce }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" ng-if="!food.selected " ng-click="order(food)" class="btn orderBtn">点菜</button>
+                <button type="button" ng-if="food.selected" ng-disabled class="btn oderedBtn">已点</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<p>detail</p>-->

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content ="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,minimal-ui">
+    <title>红杏酒家-首页</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../frame/layui/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/classify.css">
+    <link rel="stylesheet" href="../css/ordered.css" />
+    <link rel="stylesheet" href="../css/introduction.css" >
+</head>
+<body ng-app="myApp" id="home">
+<div class="container-fluid">
+    <!--<div class="top relative">
+        <a href="#/introduction" class="f20 absolute intro-link">
+            <span class="fa fa-rocket inline-block"></span> 餐厅介绍
+        </a>
+        <a href="#/main" class="f20 absolute classify-link">
+            <span class="fa fa-bars inline-block"></span> 菜品分类
+        </a>
+        &lt;!&ndash;购物车&ndash;&gt;
+        <div class="row">
+            <div class="inline-block absolute cart-div ">
+                <button class="btn show-order-btn" type="button" onclick="showCart()">
+                    <span class="fa fa-2x fa-shopping-cart"></span>
+                    <span class="f20"> 已点</span>
+                    <span class="badge">{{ orders.length }}</span>
+                </button>
+                <div class="absolute odered-food-container cart">
+                    <p class="relative order-info">
+                        <span class="absolute align-center inline-block">菜名</span>
+                        <span class="absolute align-center inline-block">数量</span>
+                        <span class="absolute align-center inline-block">价格</span>
+                    </p>
+                    <p ng-repeat="order in orders" class="relative order-info">
+                        <span class="absolute inline-block align-center">{{ order.name }}</span>
+                        <span class="absolute inline-block align-center">{{ order.num }}</span>
+                        <span class="absolute inline-block align-center">{{ order.price | currency:"￥" }}</span>
+                    </p>
+                    <div class="go-count-div">
+                        <a href="#/ordered" class="btn btn-primary" >去结算</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+    <div ng-view></div>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="../frame/layui/layui/layui.js"></script>
+    <script src="../src/angular.min.js"></script>
+    <script src="../src/angular-route.js"></script>
+    <script src="../js/home.js"></script>
+
+</body>
+</html>

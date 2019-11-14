@@ -1,0 +1,54 @@
+<div id="ordered">
+	<!--顶部信息条区域-->
+	<div class="title">
+			<a href="#/main" class="fa fa-angle-left position-left5"></a>
+			<span class="position-left43">我的篮子</span>
+		</div>
+	<!--菜单控制区域-->
+	<div>
+		<div class="border-bottom" ng-repeat="x in text" on-finish-render-filters>
+			<img ng-src="{{x.src}}" alt="没事" class="position-left5 img-size"/>
+			<div>
+				<span class="position-left40">{{x.name}}</span>
+				<span class="position-top60">{{x.price | currency:"￥"}}元/份</span>
+			</div>
+			<span class="position-left55 subtotal"></span>
+			<i class="fa fa-minus-square position-left72" ng-click="reduce($index)"></i>
+			<input type="text" class="width30" value={{x.num}} />
+			<i class="fa fa-plus-square position-left80" ng-click="add($index)"></i>
+			<i class="fa fa-remove position-lefttop90" ng-click="delete($index)"></i>
+		</div>
+	</div>
+	<!--备注菜品信息-->
+	<div class="position-relative">
+			<p class="position-left5 margin-top20">备注：</p>
+			<textarea name="" rows="" cols="" maxlength="20" placeholder="如有其它需要，请备注..." class="width87"></textarea>
+		</div>
+	<!--小结信息区域-->
+	<div class="margin-top30">
+			<p>
+				<span>美食份数：</span>
+				<span id="total"></span>
+			</p>
+			<p>
+				<span>总计：</span>
+				<span id="cost">42</span>
+				<span>元</span>
+			</p>
+		</div>
+	<!--确认菜单-->
+	<div class="margin100">
+			<input type="button" value="确认下单" class="affirm btn btn-primary btn-lg" ng-click="submit()"
+				   data-toggle="modal" data-target="#myModal" />
+	</div>
+	<!-- Modal 模态框 -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content modal-cont">
+					<div class="modal-body">
+						点单成功，请稍等小二为您确定已点菜单
+					</div>
+				</div>
+			</div>
+	</div>
+</div>

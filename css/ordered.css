@@ -1,0 +1,125 @@
+@charset "utf-8";
+/*顶部信息条*/
+#ordered .title{
+	background: #2dc0b8;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    position: relative;
+}
+#ordered .position-left5{
+	position: relative;
+	left: 5%;
+    color: white;
+}
+#ordered .position-left43{
+	position: relative;
+	left: 43%;
+}
+/*菜单控制区域*/
+#ordered .img-size{
+	width: 200px;
+	height: 123px;
+}
+#ordered .border-bottom{
+	border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    font-size: 16px;
+}
+#ordered .position-left40{
+	position: absolute;
+	left: 40%;
+    top: 45%;
+}
+#ordered .position-top60{
+	position: absolute;
+    left: 40%;
+    top: 65%;
+    font-size: 12px;
+    color: #ebc208;
+} 
+#ordered .position-left55{
+	position: absolute;
+	left: 55%;
+	top: 45%;
+}
+#ordered .position-left72{
+	position: absolute;
+	left: 72%;
+	top: 45%;
+	color: #ebc208;
+}
+#ordered .position-left80{
+	position: absolute;
+	left: 80%;
+	top: 45%;
+	color: #ebc208;
+}
+#ordered .position-lefttop90{
+	position: absolute;
+	left: 90%;
+	top: 45%;
+	color: #ebc208;
+}
+#ordered .width30{
+	width: 30px;
+	position: absolute;
+	left: 75%;
+	top: 42%;
+	text-align: center;
+}
+/*备注信息区域*/
+#ordered .position-relative{
+	position: relative;
+}
+#ordered .margin-top20{
+	margin-top: 20px;
+	margin-bottom: 5px;
+}
+
+#ordered .width87{
+    width: 87%;
+    height: 35px;
+    position: relative;
+    left: 5%;   
+    resize: none;
+    font-size: 18px;
+    text-indent: 10px;
+}
+/*小结信息区域*/
+#ordered .margin-top30{
+	position: relative;
+    left: 5%;
+    margin-top: 30px;
+    font-size: 24px;
+}
+#ordered .affirm{
+	background: #2dc0b8;
+    width: 200px;
+    border: 0;
+    border-radius: 5px;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    font-weight: 500;
+    padding: 0;
+}
+#ordered .margin100{
+	text-align: center;
+    margin: 100px 0;
+}
+/*模态框*/
+#ordered .modal-cont{
+	font-size: 30px;
+    height: 200px;
+    line-height: 165px;
+    text-align: center;
+    position: relative;
+    /*top: 300px;*/
+    color: #ffffff;
+    background: #2dc0b8;
+}
+

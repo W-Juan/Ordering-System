@@ -1,0 +1,71 @@
+#index .out{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#box{
+	width: 400%;
+	height: 100%;
+	position: absolute;
+}
+
+#index .inbox{
+	height: 100%;
+	background-color: white;
+	float: left;
+}
+
+#index .inbox img{
+	margin: auto;
+	height: 100%;
+	margin-top: 10%;
+}
+
+#index .next{
+	position: absolute;
+}
+
+#index .bl{
+	bottom: 5%;
+	left: 41%;
+}
+
+#index .bl2{
+	top: 20%;
+    right: 15%;
+    font-family: "楷体";
+    font-size: 20px;
+}
+
+#index .bl3{
+	bottom: 10%;
+    width: 60%;
+    left: 10%;
+    font-family: "楷体";
+    font-size: 20px;
+}
+
+#index .bl4{
+	bottom: 5%;
+    left: 15%;
+    font-family: "楷体";
+    font-size: 20px;
+}
+
+#index .bl5{
+	top: 20%;
+	left: 37%;
+}
+
+#index .bl5 button{
+	width: 200px;
+    height: 50px;
+    background-color: #2dc0b8;
+    font: "楷体" 20px;
+    color: white;
+}
+
+#index .tit{
+	font-family: "楷体";
+}

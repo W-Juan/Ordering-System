@@ -1,0 +1,48 @@
+.layui-nav{
+    background-color: #2dc0b8;
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+.layui-nav a{
+    color: white;
+    font-size: 18px;
+}
+.layui-nav .layui-nav-item a{
+    padding: 0 18px;
+    color: #fff;
+}
+.layui-nav-bar{
+    background-color: #fe8617;
+}
+.layui-nav-item{
+    margin-right: 0px;
+}
+.layui-this a{
+    color: #006797;
+}
+.layui-this:after{
+    background-color: #fe8617;
+}
+@media screen and (min-width: 768px){
+    .layui-nav-item{
+        margin-right: 20px;
+    }
+}
+/*--购物车---*/
+.layui-nav .cartLi{
+    position: static;
+}
+.layui-nav .fa-shopping-cart{
+    font-size: 22px;
+}
+.cartLi .cart-div .odered-food-container{
+    top:60px;
+}
+.cartLi .cart-div a{
+    padding:5px 18px;
+}
+.layui-nav .layui-nav-item a{
+    display: inline-block;
+}

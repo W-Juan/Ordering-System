@@ -1,0 +1,123 @@
+@charset "utf-8";
+.element {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,header,footer,nav,section{
+    padding: 0;
+    margin: 0;
+}
+header,footer,nav,section{
+    display: block;
+}
+body{
+    overflow-x: hidden;
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.fl{
+    float: left;
+}
+.f16{
+    font-size: 16px;
+}
+.f18{
+    font-size: 18px;
+}
+.f20{
+    font-size: 20px;
+}
+.inline-block{
+    display: inline-block;
+}
+.block{
+    display: block;
+}
+/*清除浮动*/
+.clear:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/*----新增------*/
+.align-center{
+    text-align: center;
+}
+
+
+/*------热门推荐-------*/
+.single-box button{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    width: 80px;
+    height: 25px;
+    background-color:#2dc0b8 ;
+    outline: none;
+    border: none;
+    color: white;
+    -webkit-border-radius: 12.5px;
+    -moz-border-radius: 12.5px;
+    border-radius: 12.5px; ;
+}
+.single-box .oderedBtn,#myModal .oderedBtn,#myModal .orderedBtn{
+    background:#fe8617 ;
+    color: white;
+}
+.hotContainer{
+    margin-top:20px
+}
+ .single-box{
+    margin-bottom: 20px;
+}
+ .single-box h3{
+    margin: 15px 0 5px;
+}
+
+ .single-box p{
+    color:#fe8617 ;
+}
+ .single-box img{
+    width: 100%;
+}
+ .orderBtn{
+    background-color:#2dc0b8;
+     color: white;
+}
+
+ /*--模态框----*/
+#myModal li{
+    line-height: 25px;
+}
+#myModal h2{
+    font-size:28px;
+}
+#myModal .modal-dialog{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#myModal .imgContainer{
+    text-align: center;
+}
+#myModal img{
+    width: 200px;
+}
+#myModal .modal-footer{
+    text-align: center;
+}
+#myModal .modal-footer .btn{
+    width: 30%;
+}

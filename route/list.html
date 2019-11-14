@@ -1,0 +1,50 @@
+<ul class="layui-nav relative" lay-filter="demo">
+    <!--<li class="layui-nav-item"><a href="home.html"><i class="fa fa-home"></i></a></li>-->
+    <li class="layui-nav-item"><a href="#/main">主菜</a></li>
+    <li class="layui-nav-item"><a href="#/soup">汤</a></li>
+    <li class="layui-nav-item"><a href="#/wine">酒水饮料</a></li>
+    <li class="layui-nav-item"><a href="#/other">其他</a></li>
+    <li class="layui-nav-item"><a href="#/home" ng-click="goHome()">回到主页</a></li>
+    <li class="layui-nav-item cartLi">
+        <!--购物车-->
+        <div class="inline-block absolute cart-div ">
+            <button class="btn show-order-btn" type="button" onclick="showCart()">
+                <span class="fa fa-2x fa-shopping-cart"></span>
+                <span class="f20"> 已点</span>
+                <span class="badge">{{ orders.length }}</span>
+            </button>
+            <div class="absolute odered-food-container cart">
+                <div ng-if="orders.length">
+                    <p class="relative order-info">
+                        <span class="absolute align-center inline-block">菜名</span>
+                        <span class="absolute align-center inline-block">数量</span>
+                        <span class="absolute align-center inline-block">价格</span>
+                    </p>
+                    <p ng-repeat="order in orders" class="relative order-info">
+                        <span class="absolute inline-block align-center">{{ order.name }}</span>
+                        <span class="absolute inline-block align-center">{{ order.num }}</span>
+                        <span class="absolute inline-block align-center">{{ order.price | currency:"￥" }}</span>
+                    </p>
+                    <div class="go-count-div">
+                        <a href="#/ordered" class="btn btn-primary" >去结算</a>
+                    </div>
+                </div>
+                <div ng-if="!orders.length">您还没选择美食,快去点餐吧！</div>
+            </div>
+        </div>
+    </li>
+
+</ul>
+<article class="container">
+    <div class="single-box col-sm-6 col-xs-12 relative" ng-repeat="x in datas" ng-click="showDetail(x)">
+        <img ng-src="{{x.src}}" data-toggle="modal" data-target="#myModal">
+        <div>
+            <h3>{{x.name}}</h3>
+            <p>{{x.price | currency :'￥'}}/份</p>
+            <button type="button" ng-if="!x.selected " ng-click="order(x)" class="orderBtn">点菜</button>
+            <button type="button" ng-if="x.selected" class="oderedBtn" ng-disabled>已点</button>
+        </div>
+    </div>
+</article>
+<detail food="food"></detail>
+
